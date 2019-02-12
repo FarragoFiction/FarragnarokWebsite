@@ -176,19 +176,20 @@ class GullConsort extends Consort {
 
     @override
     void initTopics() {
-        chats.add(seagullQuirk("i am so lost!!!!!"),10.0);
-        chats.add(seagullQuirk("i am a spooky ghost!!!!!"),5.0);
-        chats.add(seagullQuirk(""),50.0);
+        chats.add(seagullQuirk("i am so lost!!!!!"),3.0);
+        chats.add(seagullQuirk("i am a spooky ghost!!!!!"),1.0);
+        chats.add(seagullQuirk(" "),10.0);
         chats.add(seagullQuirk("boo!!!!!"),10.0);
         chats.add(seagullQuirk("hello!!!!!"),10.0);
-        chats.add(seagullQuirk("sqwawk!!!!!"),10.0);
+        chats.add(seagullQuirk("sqwawk!!!!!"),100);
         chats.add(seagullQuirk("bears!!!!!"),10.0);
         chats.add(seagullQuirk("ducks!!!!!"),10.0);
-        chats.add(seagullQuirk("please guide us!!!!!"),10.0);
-
+        chats.add(seagullQuirk("please guide us!!!!!"),2.0);
+        //:gigglesnort://
         chats.add(seagullQuirk("uhgxl!!!!!"),1.0);
-        chats.add(seagullQuirk("fenrir is so confusing!!!!!"),3.0);
+        chats.add(seagullQuirk("fenrir is so confusing!!!!!"),1.0);
         chats.add(seagullQuirk("why do you have horns?????"),1.0);
+        //:gigglesnort://
         chats.add(seagullQuirk("what is 'caesar'?????"),1.0);
 
 
