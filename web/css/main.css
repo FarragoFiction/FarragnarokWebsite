@@ -1,0 +1,252 @@
+@font-face {
+    font-family: strife;
+    src: url("../Fonts/Strife.ttf");
+}
+
+html,body {
+  width: 100%;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'strife', sans-serif;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  background: #002d4a;
+
+  }
+
+  .titleScreen{
+    position: absolute;
+    font-size: 72px;
+    top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    left: 240px;
+  }
+
+.storeButton{
+  font-family: 'strife', sans-serif;
+    font-size: 32px;
+    width: 100px;
+    display: inline;
+
+    padding-left: 33px;
+    padding-right: 33px;
+    margin: 50px;
+    padding-top: 10px;
+}
+
+.meteorButton{
+  font-family: 'strife', sans-serif;
+    font-size: 32px;
+    width: 300px;
+    display: inline-block;
+
+    padding-left: 33px;
+    padding-right: 33px;
+    margin: 50px;
+    padding-top: 10px;
+}
+
+.storeButtonColor{
+    border: 8px solid #900618;
+    background-color: #b3041b;
+    border-right: none;
+    border-top: none;
+}
+
+.funds{
+    margin-left: 148px;
+    width: 1000px;
+}
+
+.outerStoreTable{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab{
+    background-color: #fef4ed;
+    color: #242d26;
+    border: 3px solid #242d26;
+    display: inline;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.selectedTab{
+    background-color: #ffffff;
+    border: 3px solid #76c34e;
+}
+
+
+
+.inventoryItem{
+    background-color: #fef4ed;
+    border: 3px solid #242d26;
+    border-radius: 15px;
+}
+
+.innerStoreTableRow{
+    width: 200px;
+    height: 55px;
+    padding: 3px;
+    color: #242d26;
+    background-color: #ffffff;
+    border: 5px solid #242d26;
+    border-radius: 10px;
+}
+
+.innerInventoryTableRow{
+    width: 110px;
+    height: 55px;
+    padding: 3px;
+    color: #242d26;
+    background-color: #ffffff;
+    border: 5px solid #242d26;
+    border-radius: 10px;
+}
+
+.selected{
+    border: 5px solid #76c34e;
+}
+
+
+.imageCell{
+    display: inline-block;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.costCell{
+    display: inline-block;
+    font-size: 48px;
+    vertical-align: top;
+    line-height: 65px;
+    height: 50px;
+    padding-left: 10px;
+}
+
+
+.store{
+    z-index: 10;
+    position: relative; //popup uses this
+}
+
+#worldCanvas{
+    left: 150px;
+    top: 250px;
+}
+
+.innerStoreRowContainer{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.innerInventoryRowContainer{
+    margin-top: 250px;
+    height: 640px;
+    overflow-y: scroll;
+}
+
+.storePopup{
+    height: 317px;
+    width: 716px;
+    position: absolute;
+    left: 370px;
+    top: 170px;
+    color: #242d26;
+    background-image: url("../images/BGs/fullPopup.png")
+}
+
+.inventoryPopup{
+    height: 317px;
+    width: 716px;
+    position: absolute;
+    left: 70px;
+    top: 370px;
+    color: #242d26;
+    background-image: url("../images/BGs/fullPopup.png")
+}
+
+.plotPopup{
+    height: 317px;
+    width: 716px;
+    position: absolute;
+    left: 70px;
+    top: 370px;
+    z-index: 999;
+    color: #242d26;
+    background-image: url("../images/BGs/fullPopup.png")
+}
+
+.popupHeader{
+    position: absolute;
+    top: 88px;
+    left: 113px;
+}
+
+.popupBody{
+    position: absolute;
+    top: 133px;
+    left: 113px;
+    width: 500px;
+    text-align: left;
+}
+
+.thenPerish{
+   position: fixed;
+   top: 25%;
+   left: 25%;
+   opacity: 0.03;
+
+}
+
+.popupParents{
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    width: 500px;
+    text-align: left;
+}
+
+.parentBox{
+    display: inline;
+}
+
+.worldContainer{
+    position: relative;
+}
+
+.parentHorizontalScroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 500px;
+    height: 113px;
+}
+
+a {
+    color: #005b68;
+}
+
+.frameLayer{
+    position:absolute;
+    top:0px;
+    left:0px;
+    pointer-events: none;
+}
+
+
+
+#output {
+  padding: 20px;
+  text-align: center;
+  width: 1000px;
+}
