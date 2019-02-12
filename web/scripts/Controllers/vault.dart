@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:html';
 import "../Consort.dart";
-Element output = querySelector('#output');
+Element output = querySelector('#strip');
 
 
 Future<Null> main() async {

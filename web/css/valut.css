@@ -34,8 +34,7 @@
 
 .consortStrip{
     position: relative;
-    width: 100%
-    border: 3px solid #242d26;
+    width: 100%;
     background-image: url("../images/BGs/AlternianCliffLoop.png");
     height: 375px;
     background-repeat: repeat-x;
