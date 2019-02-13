@@ -186,7 +186,7 @@ class GullConsort extends Consort {
         chats.add(seagullQuirk("ducks!!!!!"),10.0);
         chats.add(seagullQuirk("please guide us!!!!!"),2.0);
         //:gigglesnort://
-        chats.add(seagullQuirk("uhgxl!!!!!"),1.0);
+        chats.add(seagullQuirk("ivulz!!!!!"),1.0);
         chats.add(seagullQuirk("fenrir is so confusing!!!!!"),1.0);
         chats.add(seagullQuirk("why do you have horns?????"),1.0);
         //:gigglesnort://
