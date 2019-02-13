@@ -7,7 +7,7 @@ Element output = querySelector('#strip');
 
 
 Future<Null> main() async {
-    Consort.spawnConsorts(output,true,true);
+    Consort.spawnConsorts(output, true, false);
     loadNavbar();
     AudioElement bgAudio = querySelector('#bgAudio');
 

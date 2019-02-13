@@ -54,11 +54,22 @@
     padding: 15px;
 }
 
+.header{
+    text-decoration: underline;
+    text-align: left;
+    font-size: 24px;
+}
+
+.paragraph{
+    text-align: left;
+    padding: 10px;
+}
+
 .gullChatter{
     position:absolute;
-    color: #a8844c;
+    color: #795114;
     background: #f2c272;
-    border: 3px solid #a8844c;
+    border: 3px solid #795114;
     border-radius: 45px;
     padding: 15px;
 }

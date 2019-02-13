@@ -37,7 +37,7 @@ class Consort {
         animate();
     }
 
-    static void spawnConsorts(Element output) {
+    static void spawnConsorts(Element output, bool beavers, bool gulls) {
         DivElement strip = new DivElement()..classes.add("consortStrip");
         output.append(strip);
         Random rand = new Random();
@@ -50,9 +50,9 @@ class Consort {
         for(int i = 0; i<numberConsorts; i++) {
             int image = rand.nextInt(2);
             //first two are always different
-            if(i == 0 || (rand.nextBool() && i != 1)) {
+            if(beavers &&(i == 0 || (rand.nextBool() && i != 1))) {
                 new Consort(strip, x, "$image.gif");
-            }else {
+            }else if(gulls) {
                 new GullConsort(strip, x);
             }
             x += rand.nextInt(500)+50;
