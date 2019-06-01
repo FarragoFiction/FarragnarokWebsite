@@ -7,7 +7,7 @@ import 'package:CommonLib/Random.dart';
 
 class Consort {
     String chatterClass = "chatter";
-
+    bool raffle;
     ImageElement imageElement;
     int x = 0;
     int textY = 250;
@@ -23,7 +23,7 @@ class Consort {
     WeightedList<String> chats = new WeightedList();
     DateTime lastTalk;
 
-    Consort(Element this.container, int this.x, String src) {
+    Consort(Element this.container, int this.x, String src, bool this.raffle) {
         rand.nextInt(); //init
         up = rand.nextBool();
         imageElement = new ImageElement(src: "images/Consorts/$src");
@@ -51,9 +51,32 @@ class Consort {
             int image = rand.nextInt(2);
             //first two are always different
             if(beavers &&(i == 0 || (rand.nextBool() && i != 1))) {
-                new Consort(strip, x, "$image.gif");
+                new Consort(strip, x, "$image.gif", false);
             }else if(gulls) {
-                new GullConsort(strip, x);
+                new GullConsort(strip, x, false);
+            }
+            x += rand.nextInt(500)+50;
+            if(x > 1000) x = 0;
+        }
+    }
+
+    static void spawnRaffleConsorts(Element output, bool beavers, bool gulls) {
+        DivElement strip = new DivElement()..classes.add("consortStrip");
+        output.append(strip);
+        Random rand = new Random();
+        int x = rand.nextInt(10) - 5;
+        bool alligator = false;
+        int numberConsorts = rand.nextInt(5)+2; //have at least one of  each type
+        if(rand.nextDouble()<.1) {
+            numberConsorts = rand.nextInt(12)+2; //have at least one of  each type
+        }
+        for(int i = 0; i<numberConsorts; i++) {
+            int image = rand.nextInt(2);
+            //first two are always different
+            if(beavers &&(i == 0 || (rand.nextBool() && i != 1))) {
+                new Consort(strip, x, "$image.gif", true);
+            }else if(gulls) {
+                new GullConsort(strip, x,true);
             }
             x += rand.nextInt(500)+50;
             if(x > 1000) x = 0;
@@ -61,6 +84,12 @@ class Consort {
     }
 
     void initTopics() {
+        if(raffle) {
+            chats.add("Coins!!");
+            chats.add("Raffle!!");
+            chats.add("thwap thwap!!",0.5);
+            return;
+        }
 
         chats.add("",10.0);
         chats.add("thwap!!",10.0);
@@ -115,10 +144,16 @@ class Consort {
 }
 
 class FAQConsort extends Consort {
-    FAQConsort(Element container, int x, String src) : super(container, x, src);
+    FAQConsort(Element container, int x, String src, bool raffle) : super(container, x, src, raffle);
 
     @override
     void initTopics() {
+        if(raffle) {
+            chats.add("Coins!!");
+            chats.add("Raffle!!");
+            chats.add("thwap thwap!!",0.5);
+            return;
+        }
         chats.add("",5.0);
         chats.add("thwap!!",5.0);
         chats.add("thwap thwap!!",5.0);
@@ -136,7 +171,7 @@ class FAQConsort extends Consort {
 
 class StoreConsort extends Consort {
 
-    StoreConsort(Element container, int x, String src) : super(container, x, src) {
+    StoreConsort(Element container, int x, String src, bool raffle) : super(container, x, src, raffle) {
         print("store consort is go");
     }
 
@@ -150,7 +185,7 @@ class StoreConsort extends Consort {
 
 
 class SecretConsort extends Consort {
-    SecretConsort(Element container, int x,) : super(container, x, "4037.gif") {
+    SecretConsort(Element container, int x,bool raffle) : super(container, x, "4037.gif", raffle) {
         imageElement.onClick.listen((Event e) {
             window.alert("!! you did it !!  you clicked my scales!! thwap thwap!! have a secret!! i don't know what it does!!");
             window.location.href = "index.html?haxMode=on";
@@ -171,11 +206,19 @@ class GullConsort extends Consort {
 
     static List<String> choices = <String>["happy_blue.gif","happy_red.gif", "happy_yellow.gif"];
     static Random globalRand = new Random();
-    GullConsort(Element container, int x,) : super(container, x, globalRand.pickFrom(choices)) {
+    GullConsort(Element container, int x, bool raffle) : super(container, x, globalRand.pickFrom(choices), raffle) {
     }
 
     @override
     void initTopics() {
+        if(raffle) {
+            chats.add("Coins!!");
+            chats.add("Raffle!!");
+            chats.add(seagullQuirk("boo!!!!!"),0.5);
+            chats.add(seagullQuirk("sqwawk!!!!!"),0.5);
+
+            return;
+        }
         chats.add(seagullQuirk("i am so lost!!!!!"),3.0);
         chats.add(seagullQuirk("i am a spooky ghost!!!!!"),1.0);
         chats.add(seagullQuirk(" "),10.0);
@@ -211,7 +254,7 @@ class GullConsort extends Consort {
 }
 
 class SecretFAQConsort extends FAQConsort {
-    SecretFAQConsort(Element container, int x,) : super(container, x, "4037.gif") {
+    SecretFAQConsort(Element container, int x,bool raffle) : super(container, x, "4037.gif", raffle) {
         imageElement.onClick.listen((Event e) {
             window.alert("!! you did it !!  you clicked my scales!! thwap thwap!! have a secret!! i don't know what it does!!");
             window.location.href = "index.html?haxMode=on";
