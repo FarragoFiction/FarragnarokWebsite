@@ -86,7 +86,7 @@ class Consort {
     void initTopics() {
         if(raffle) {
             chats.add("Coins!!");
-            chats.add("Raffle!!");
+            chats.add("Sweepstakes!!");
             chats.add("thwap thwap!!",0.5);
             return;
         }
