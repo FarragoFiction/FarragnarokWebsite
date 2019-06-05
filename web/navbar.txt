@@ -26,7 +26,7 @@
 
         <li class = "menuButtonPureCSS"><a target = "_blank" href="http://treesim.wikia.com/wiki/TreeSim_Wiki">WIKI</a></li>
   <li class = "menuButtonPureCSS"><a href="https://farrago-fiction.myshopify.com/collections/lohae">MERCH</a></li>
-
+<li class = "menuButtonPureCSS"><a href="lohaecoinraffle.html">COIN</a></li>
   <li class = "menuButtonPureCSS"><a href="https://discord.gg/KPunMPc">DISCORD</a></li>
     <li class = "menuButtonPureCSS"><a href="http://www.farragnarok.com/presskit/">PRESSKIT</a></li>
 
