@@ -13,4 +13,9 @@ Future<Null> main() async {
   window.onClick.listen((Event e) {
     bgAudio.play();
   });
+
+  ButtonElement button = querySelector("#button");
+  button.onClick.listen((Event e) {
+    querySelector("#hidden").style.display = "block";
+  });
 }
